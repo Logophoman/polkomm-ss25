@@ -1,0 +1,313 @@
+/* style.css */
+:root {
+    --primary-color: #003366; /* Dunkelblau */
+    --secondary-color: #f4f4f4; /* Helles Grau */
+    --text-color: #333;
+    --accent-color: #e8491d; /* Akzentfarbe Orange */
+    --max-width: 960px;
+    --border-radius: 5px;
+    --hover-lighten: rgba(255, 255, 255, 0.1);
+    --hover-darken: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff; /* Weißer Hintergrund */
+    padding-bottom: 60px; /* Platz für den Footer */
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 2rem;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+nav ul {
+    list-style: none;
+    padding: 1rem 0;
+    background: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--accent-color);
+}
+
+main {
+    margin-top: 2rem;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul, ol {
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+}
+
+blockquote {
+    background: var(--secondary-color);
+    border-left: 5px solid var(--primary-color);
+    margin: 1.5em 0;
+    padding: 1em 1.5em;
+    font-style: italic;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+em, i {
+    font-style: italic;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 2rem 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+footer {
+    background: var(--text-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Styling für Interaktive Elemente */
+.interactive-box {
+    background-color: var(--secondary-color);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.interactive-box h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+button, .button-like {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+button:hover, .button-like:hover {
+    background-color: #d73a0a; /* Dunkleres Orange */
+    transform: translateY(-1px);
+}
+
+button:active, .button-like:active {
+     transform: translateY(0px);
+}
+
+.definition, .example {
+    background-color: #e7f3fe; /* Hellblau */
+    border-left: 4px solid #2196F3; /* Blau */
+    padding: 10px 15px;
+    margin: 1em 0;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.hidden-content {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: white;
+    border: 1px dashed #ccc;
+    border-radius: var(--border-radius);
+}
+
+.quiz-options label {
+    display: block;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s ease;
+}
+
+.quiz-options label:hover {
+     background-color: #e0e0e0;
+}
+
+.quiz-options input[type="radio"] {
+    margin-right: 10px;
+}
+
+.feedback {
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+}
+
+.feedback.correct {
+    background-color: #d4edda; /* Grünlich */
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.feedback.incorrect {
+    background-color: #f8d7da; /* Rötlich */
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.method-section {
+    background-color: #f9f9f9; /* Sehr helles Grau */
+    border: 1px solid #e0e0e0; /* Heller Rand */
+    border-radius: var(--border-radius);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem; /* Abstand zwischen den Methodenblöcken */
+}
+
+.method-section h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
+    /* Optional: leichter Unterstrich für die Methodenüberschrift */
+    /* border-bottom: 1px solid #ddd; */
+}
+
+.method-section ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0; /* Weniger Abstand am Ende der Liste innerhalb des Blocks */
+}
+
+.pdf-embed-box iframe {
+    border-radius: var(--border-radius); /* Abrundung für den iframe Rand */
+}
+
+.warning-box {
+    background-color: #fff3cd; /* Blasses Gelb */
+    border: 1px solid #ffeeba;
+    border-left: 5px solid #ffc107; /* Gelber Rand links */
+    border-radius: var(--border-radius);
+    padding: 1rem 1.5rem;
+    margin-top: 1.5rem; /* Abstand nach oben */
+    color: #856404; /* Dunkelgelbe Schrift */
+}
+
+.warning-box h4 {
+    color: #856404; /* Überschrift in Warnbox auch dunkelgelb */
+    margin-bottom: 0.75rem;
+}
+
+.warning-box ul {
+    margin-top: 0.5rem;
+    margin-left: 1rem; /* Leichter Einzug der Liste */
+    list-style-type: disc; /* Standard-Aufzählungszeichen */
+}
+.warning-box li {
+     margin-bottom: 0.3rem; /* Kleinerer Abstand zwischen Listenelementen */
+}
+
+/* Einfache Darstellung für den Scraping-Prozessfluss */
+.process-flow {
+    display: flex; /* Elemente nebeneinander */
+    flex-wrap: wrap; /* Umbruch bei schmalem Bildschirm */
+    align-items: center; /* Vertikal zentrieren */
+    gap: 0.5rem; /* Kleiner Abstand zwischen Elementen */
+    margin: 1rem 0; /* Abstand oben/unten */
+    padding: 0.5rem;
+    background: #f8f9fa; /* Leicht grauer Hintergrund für den Fluss */
+    border-radius: var(--border-radius);
+}
+
+.process-flow .step {
+    padding: 0.3rem 0.6rem;
+    background-color: var(--secondary-color); /* Heller Hintergrund für Schritte */
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.process-flow .arrow {
+    font-weight: bold;
+    color: var(--primary-color);
+}
