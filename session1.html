@@ -36,7 +36,7 @@
             <p>Die Modulnote setzt sich aus zwei Teilleistungen zusammen:</p>
             <ul>
                 <li><strong>75% Hausarbeit:</strong> Eine wissenschaftliche Arbeit, in der Sie ein selbstgewähltes Thema
-                    aus dem Bereich der politischen Online-Kommunikation theoretisch fundiert und (vorzugsweise)
+                    aus dem Bereich der politischen Online-Kommunikation theoretisch fundiert und
                     empirisch bearbeiten.</li>
                 <li><strong>25% Präsentation:</strong> Vorstellung Ihres Hausarbeitsprojekts (Thema, Fragestellung,
                     Methode, zentrale Ergebnisse/Erkenntnisse) am Ende des Semesters.</li>
@@ -97,7 +97,7 @@
                 <li><strong>Inhalt:</strong> Theoretische Fundierung, klare Forschungsfrage, adäquate
                     Forschungsmethode(n), (Online-)Datenerhebung (falls empirisch), Analyse der Daten, Diskussion der
                     Ergebnisse im Licht der Theorie und Forschungsliteratur.</li>
-                <li><strong>Gruppenarbeit:</strong> Bei Gruppen erhöht sich der Richtwert für den Umfang auf ca.
+                <li><strong>Gruppenarbeit:</strong> Bei Gruppen erhöht sich der Richtwert für den Umfang um ca.
                     <strong>+ 7.000 Zeichen pro Person</strong> da ein tiefergehenderes oder umfangreicheres Projekt
                     erwartet wird.
                 </li>
@@ -135,7 +135,8 @@
                     Mastodon etc. zur Verbreitung von Botschaften, zur Interaktion und Mobilisierung.</li>
                 <li><strong>Messenger-Dienste:</strong> WhatsApp, Telegram, Signal etc. für direktere
                     (Gruppen-)Kommunikation und Mobilisierung.</li>
-                <li><strong>Video- und Audio-Plattformen:</strong> YouTube, Vimeo sowie Podcast-Plattformen für die
+                <li><strong>Video- und Audio-Plattformen:</strong> YouTube, Vimeo sowie Podcast-Plattformen wie Spotify
+                    für die
                     Verbreitung audiovisueller politischer Inhalte.</li>
                 <li><strong>Kollaborative Plattformen:</strong> Wikis, Foren oder spezialisierte
                     E-Partizipationsplattformen.</li>
@@ -218,8 +219,7 @@
             <div class="pdf-embed-box interactive-box" style="margin-bottom: 2rem;">
                 <h4>Vertiefende Lektüre: Methodenüberblick</h4>
                 <p>Das folgende Paper gibt einen umfassenden Überblick über quantitative, qualitative und
-                    computergestützte Methoden in der politischen Online-Kommunikationsforschung. Es dient als wichtige
-                    Grundlage für Ihre eigenen Projektideen:</p>
+                    computergestützte Methoden in der politischen Online-Kommunikationsforschung. Es dient als Überblick für Ihre eigenen Forschungsmethoden:</p>
                 <iframe src="Online Political Communication Research Methods.pdf" width="100%" height="800px"
                     style="border: 1px solid #ccc; margin-top: 1rem;"
                     title="PDF: Online Political Communication Research Methods">
@@ -246,7 +246,45 @@
                     <li><em>Qualitativ:</em> Interpretation von Mustern, Bedeutungen, Argumentationsstrukturen (z.B.
                         Frame-Analyse, Diskursanalyse). Eignet sich für tiefgehendes Verständnis spezifischer Fälle oder
                         Kommunikationsstrategien.</li>
-                </ul>
+
+                    <!-- Content Analysis Animation Start -->
+                    <div id="contentanalysis-visualization">
+                        <!-- 1. Sample Content Area -->
+                        <div id="ca-sample-content">
+                            <div class="ca-text-item" data-id="t1">Forderung nach stärkeren Fokus auf Klimaschutz 🌳
+                                wird lauter. Wirtschaft 📈 muss nachhaltiger werden. Sozial Schwache leiden besonders
+                                unter den Folgen.</div>
+                            <div class="ca-text-item" data-id="t2">Krisenkommunikation ist unzureichend, Politik muss
+                                jetzt handeln! Geht wählen! 🗳️ Ist das sozial gerecht? ❤️</div>
+                            <div class="ca-text-item" data-id="t3">Große Sorge um Wirtschaft 💰 und Inflation €. Wie
+                                wirkt sich der Markt 📈 auf unser Klima 🌍 aus? Die Regierung braucht einen Plan.</div>
+                            <div class="ca-text-item" data-id="t4">Neues Hilfspaket für Armut geschnürt ❤️. Debatte um
+                                Gerechtigkeit. Nachhaltige Hilfe?</div>
+                        </div>
+
+                        <!-- 2. Controls -->
+                        <div id="ca-controls">
+                            <button type="button" id="ca-btn-quant" title="Häufigkeiten zählen">Quantitative
+                                Analyse</button>
+                            <button type="button" id="ca-btn-qual" title="Themen/Frames identifizieren">Qualitative
+                                Analyse</button>
+                        </div>
+
+                        <!-- 3. Results Areas (Initially Hidden) -->
+                        <div id="ca-quant-results" class="ca-results hidden-content">
+                            <h5>Quantitative Ergebnisse (Frequenzen)</h5>
+                            <ul id="ca-quant-list"></ul>
+                        </div>
+
+                        <div id="ca-qual-results" class="ca-results hidden-content">
+                            <h5>Qualitative Ergebnisse (Codes/Themen)</h5>
+                            <ul id="ca-qual-list"></ul>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem; text-align: center;"><i>
+                            Beispiel für quantitative (Zählung) vs. qualitative (Interpretation) Analyse von
+                            Textinhalten.</i></p>
+                    <!-- Content Analysis Animation End -->
             </div>
 
             <div class="method-section">
@@ -254,6 +292,59 @@
                 <p>Befragung von Nutzern mittels Fragebogen zu ihren Einstellungen, Meinungen, Wahrnehmungen und ihrem
                     Verhalten im Kontext politischer Online-Kommunikation (z.B. Mediennutzung, politische Partizipation
                     online/offline, Vertrauen in Quellen, Wirkungswahrnehmung).</p>
+
+                <!-- Hier beginnt die Umfrage-Visualisierung -->
+                <div id="survey-visualization">
+                    <p class="survey-question"><strong>Beispielfrage:</strong> Wie wichtig ist Ihrer Meinung nach die
+                        Online-Kommunikation für politische Kampagnen?</p>
+                    <div class="likert-scale">
+                        <!-- Buttons für Likert-Skala -->
+                        <button type="button" data-value="1" title="Gar nicht wichtig">1<br /><small>(Gar nicht
+                                wichtig)</small></button>
+                        <button type="button" data-value="2" title="Eher nicht wichtig">2</button>
+                        <button type="button" data-value="3" title="Neutral">3<br /><small>(Neutral)</small></button>
+                        <button type="button" data-value="4" title="Eher wichtig">4</button>
+                        <button type="button" data-value="5" title="Sehr wichtig">5<br /><small>(Sehr
+                                wichtig)</small></button>
+                    </div>
+
+                    <!-- Bereich für Feedback und Ergebnisse (initial versteckt) -->
+                    <p id="survey-feedback" class="feedback"></p> <!-- Feedback wird hier eingefügt -->
+
+                    <div id="survey-results" class="hidden-content">
+                        <h4>(Simulierte aggregierte Ergebnisse)</h4>
+                        <div class="results-bars">
+                            <!-- Bar container (data-value used by JS) -->
+                            <div class="bar-container" data-value="1">
+                                <div class="bar" id="bar-1"></div>
+                                <span class="bar-label">1</span>
+                                <span class="bar-value" id="value-1"></span>
+                            </div>
+                            <div class="bar-container" data-value="2">
+                                <div class="bar" id="bar-2"></div>
+                                <span class="bar-label">2</span>
+                                <span class="bar-value" id="value-2"></span>
+                            </div>
+                            <div class="bar-container" data-value="3">
+                                <div class="bar" id="bar-3"></div>
+                                <span class="bar-label">3</span>
+                                <span class="bar-value" id="value-3"></span>
+                            </div>
+                            <div class="bar-container" data-value="4">
+                                <div class="bar" id="bar-4"></div>
+                                <span class="bar-label">4</span>
+                                <span class="bar-value" id="value-4"></span>
+                            </div>
+                            <div class="bar-container" data-value="5">
+                                <div class="bar" id="bar-5"></div>
+                                <span class="bar-label">5</span>
+                                <span class="bar-value" id="value-5"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ende der Umfrage-Visualisierung -->
+
             </div>
 
             <div class="method-section">
@@ -263,9 +354,50 @@
                 <ul>
                     <li>Z.B.: Wie wirkt sich der Frame einer Nachricht (Version A vs. Version B) auf die politische
                         Einstellung aus?</li>
-                    <li>A/B-Tests zur Optimierung von Kampagnenelementen (z.B. verschiedene Bilder oder Calls-to-Action
-                        in Social Media Ads).</li>
+                    <li>A/B-Tests zur Optimierung von Kampagnenelementen [...]</li>
                 </ul>
+
+                <!-- Experiment Animation Start -->
+                <div id="experiment-visualization">
+                    <div class="exp-versions">
+                        <!-- Version A -->
+                        <div class="exp-version" id="exp-version-a">
+                            <h4>Version A</h4>
+                            <div class="exp-ad-mockup">
+                                <span class="exp-ad-emoji">🐶</span>
+                                <p>Unterstützen Sie unsere Kampagne für eine bessere Zukunft!</p>
+                                <button id="exp-btn-a" type="button">Jetzt spenden</button>
+                            </div>
+                            <div class="exp-results-area">
+                                <p class="exp-metric-label">Klicks (Simuliert):</p>
+                                <div class="exp-result-bar-container">
+                                    <div class="exp-result-bar" id="exp-bar-a"></div>
+                                </div>
+                                <span class="exp-result-value" id="exp-value-a">0</span>
+                            </div>
+                        </div>
+
+                        <!-- Version B -->
+                        <div class="exp-version" id="exp-version-b">
+                            <h4>Version B</h4>
+                            <div class="exp-ad-mockup">
+                                <span class="exp-ad-emoji">😺</span>
+                                <p>Unterstützen Sie unsere Kampagne für eine bessere Zukunft!</p>
+                                <button id="exp-btn-b" type="button">Projekt unterstützen</button>
+                            </div>
+                            <div class="exp-results-area">
+                                <p class="exp-metric-label">Klicks (Simuliert):</p>
+                                <div class="exp-result-bar-container">
+                                    <div class="exp-result-bar" id="exp-bar-b"></div>
+                                </div>
+                                <span class="exp-result-value" id="exp-value-b">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="exp-conclusion">Teste Varianten...</p>
+                </div>
+                <!-- Experiment Animation End -->
+
             </div>
 
             <div class="method-section">
@@ -280,7 +412,7 @@
                     style="height: 300px; width: 100%; border: 1px solid #ccc; margin-top: 1rem; position: relative;">
                 </div>
                 <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><i>Beispielhafte Visualisierung eines
-                        Netzwerks. Knoten und Kanten bewegen sich leicht durch die Physik-Simulation.</i></p>
+                        Netzwerks. Knoten und Kanten bewegen sich durch anfassen.</i></p>
             </div>
 
             <div class="method-section">
@@ -290,6 +422,28 @@
                     Retweets). Misst tatsächliches ("revealed") Verhalten statt nur selbstberichtetes ("stated")
                     Verhalten. Zugang zu detaillierten Daten ist oft eine Herausforderung (API-Beschränkungen,
                     Datenschutz).</p>
+
+                <!-- Metadata Animation Start -->
+                <div id="metadata-visualization">
+                    <!-- Content will be added by JS -->
+                    <!-- Example Structure that JS will ensure exists: -->
+                    <!--
+                     <div id="meta-content-area" class="meta-content-area">
+                         <div id="meta-item-1" class="meta-item">...</div>
+                         <div id="meta-item-2" class="meta-item">...</div>
+                         <div id="meta-item-3" class="meta-item">...</div>
+                     </div>
+                     <div id="meta-datastore" class="meta-datastore">
+                          <div id="meta-results-display" class="meta-results-display">...</div>
+                     </div>
+                     <div id="meta-cursor" class="meta-cursor"></div>
+                     -->
+                </div>
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem; text-align: center;"><i>
+                        Nutzerinteraktionen (Klicks, Likes etc.) hinterlassen digitale Spuren, die gesammelt und
+                        analysiert werden.</i></p>
+                <!-- Metadata Animation End -->
+
             </div>
 
             <div class="method-section">
@@ -303,7 +457,14 @@
                     <li><strong>Natural Language Processing (NLP):</strong> Oberbegriff für verschiedene Techniken zur
                         computergestützten Verarbeitung natürlicher Sprache (z.B. Erkennung von Entitäten, Wortarten,
                         Abhängigkeiten).</li>
+                    <li><strong>Computer Vision:</strong> Oberbegriff für verschiedene Techniken zur
+                        computergestützten Verarbeitung von Bildern (nützlich für die Inhaltsanalyse von Posts)</li>
                 </ul>
+
+                <div id="inference-visualization"></div>
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem;"><i>Vereinfachte Animation der Inferenz
+                        (Ausführung) einer Bilderkennungs-KI: Zeigt abwechselnd, wie ein Bild (Hund/Katze) durch das
+                        Netzwerk verarbeitet wird und zur entsprechenden Klassifikation führt.</i></p>
             </div>
 
             <div class="method-section">
@@ -311,6 +472,22 @@
                 <p>Vertiefende Befragung von Einzelpersonen (Interviews) oder moderierte Diskussionen in kleinen Gruppen
                     (Fokusgruppen), um subjektive Erfahrungen, Motive, Verständnisse und Interpretationen im Umgang mit
                     politischer Online-Kommunikation detailliert zu ergründen.</p>
+                <!-- Interview/Focus Group Animation Start -->
+                <div id="interviewfg-visualization">
+                    <!-- 1. Controls -->
+                    <div id="ifg-controls">
+                        <button type="button" id="ifg-btn-interview">Interview</button>
+                        <button type="button" id="ifg-btn-focusgroup">Fokusgruppe</button>
+                    </div>
+                    <!-- 2. Animation Scene -->
+                    <div id="ifg-scene">
+                        <!-- Figures and bubbles will be added here by JS -->
+                    </div>
+                </div>
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem; text-align: center;"><i>
+                        Visualisierung eines Interviews (1:1) oder einer Fokusgruppe (Gruppe), bei der
+                        Erkenntnisse ("Insights") aus der Konversation entstehen.</i></p>
+                <!-- Interview/Focus Group Animation End -->
             </div>
 
             <div class="method-section">
@@ -319,6 +496,32 @@
                     Online-Wahlkampagne, ein E-Partizipationsprojekt, die Kommunikation zu einem Krisenereignis). Oft
                     werden dabei mehrere Methoden kombiniert (Methodentriangulation), um ein umfassendes Bild zu
                     erhalten.</p>
+
+                <!-- Case Study Animation Start -->
+                <div id="casestudy-visualization">
+                    <!-- Central Case Element -->
+                    <div id="cs-case">Fall-<br />Beispiel</div>
+
+                    <!-- Method Icons (Positioned via CSS) -->
+                    <div class="cs-method" id="cs-method-survey" data-method="survey" title="Umfragen"></div>
+                    <div class="cs-method" id="cs-method-interview" data-method="interview" title="Interviews"></div>
+                    <div class="cs-method" id="cs-method-content" data-method="content" title="Inhaltsanalyse"></div>
+                    <div class="cs-method" id="cs-method-network" data-method="network" title="Netzwerkanalyse"></div>
+
+                    <!-- Connector Lines (Positioned/Styled via CSS) -->
+                    <div class="cs-connector" id="cs-connector-survey"></div>
+                    <div class="cs-connector" id="cs-connector-interview"></div>
+                    <div class="cs-connector" id="cs-connector-content"></div>
+                    <div class="cs-connector" id="cs-connector-network"></div>
+
+
+                    <!-- Magnifying Glass -->
+                    <div id="cs-magnifier">🔎</div>
+                </div>
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem; text-align: center;"><i>
+                        Verschiedene Methoden untersuchen ein Fallbeispiel (Triangulation).</i></p>
+                <!-- Case Study Animation End -->
+
             </div>
 
             <div class="method-section">
@@ -326,9 +529,53 @@
                 <p>Fokussiert auf Sprache im Gebrauch. Untersucht, wie durch sprachliche Muster, Argumentationsfiguren,
                     Narrative und Rhetorik soziale Wirklichkeit, Bedeutungen und Machtverhältnisse in Online-Diskursen
                     (mit-)konstruiert werden.</p>
+
+                <!-- Discourse Analysis Animation Start -->
+                <div id="discourse-visualization">
+                    <!-- 1. Sample Discourse Text -->
+                    <div id="discourse-text">
+                        <p><strong>Debattenbeitrag 1:</strong> Wir fordern endlich einen besseren <span
+                                class="hl-frame-security">Schutz</span> für <span class="hl-actor-pos">Bürger</span>!
+                            <span class="hl-power">Mächtige</span> <span class="hl-actor-neg">Lobbyisten</span> <span
+                                class="hl-power">dominieren</span> die Debatte, aber der <span
+                                class="hl-power">Staat</span> <span class="hl-power">muss</span> hier <span
+                                class="hl-power">regulieren</span>. Es geht um unsere <span
+                                class="hl-frame-security">Sicherheit</span> und das <span
+                                class="hl-frame-security">Gemeinschaft</span>sgefühl.
+                        </p>
+                        <p><strong>Debattenbeitrag 2:</strong> Das ist reine <span
+                                class="hl-actor-neg">Bürokratie</span> und schränkt die <span
+                                class="hl-frame-freedom">Freiheit</span> ein! <span
+                                class="hl-actor-pos">Innovatoren</span> brauchen einen <span
+                                class="hl-frame-freedom">offenen</span> <span class="hl-frame-freedom">Markt</span> und
+                            <span class="hl-frame-freedom">Chancen</span>. <span class="hl-actor-pos">Wir</span> setzen
+                            auf <span class="hl-frame-freedom">Eigenverantwortung</span>, nicht auf staatliche <span
+                                class="hl-power">Kontrolle</span>. <span class="hl-actor-neg">Kritiker</span> verstehen
+                            den <span class="hl-power">Einfluss</span> von <span
+                                class="hl-frame-freedom">Deregulierung</span> nicht.
+                        </p>
+                        <p><strong>Kommentar:</strong> Die entscheidende Frage ist: Werden Risiken (<span
+                                class="hl-frame-security">Gefahr</span>) unterschätzt oder <span
+                                class="hl-frame-freedom">Wahl</span>möglichkeiten unnötig begrenzt? <span
+                                class="hl-power">Autorität</span> muss <span
+                                class="hl-frame-security">Verantwortung</span> für die <span
+                                class="hl-frame-security">Stabilität</span> übernehmen.</p>
+                    </div>
+
+                    <!-- 2. Control Buttons (added by JS) -->
+                    <div id="discourse-controls">
+                        <!-- Buttons werden hier per JS eingefügt -->
+                    </div>
+
+                    <!-- 3. Explanation Area -->
+                    <div id="discourse-explanation" class="discourse-explanation">
+                        <i>Klicken Sie auf einen Button, um Analyseaspekte hervorzuheben.</i>
+                    </div>
+
+                </div>
             </div>
 
-            <p style="margin-top: 2rem;">Im Laufe des Seminars werden wir auf ausgewählte Methoden genauer eingehen,
+            <p style="margin-top: 2rem;">Im Laufe des Seminars können wir auf ausgewählte Methoden genauer eingehen,
                 ihre Stärken und Schwächen diskutieren und überlegen, wie sie für Ihre Hausarbeiten eingesetzt werden
                 könnten.</p>
 
@@ -388,7 +635,8 @@
                         <strong>
                             <li>Respektieren Sie `robots.txt`:** Diese Datei auf einer Website gibt an, welche Bereiche
                                 <em>nicht</em> automatisch besucht werden sollen. Auch wenn technisch umgehbar, ist die
-                                Missachtung ein starkes Signal für problematisches Verhalten.</li>
+                                Missachtung ein starkes Signal für problematisches Verhalten.
+                            </li>
                             <li>Prüfen Sie die Nutzungsbedingungen (Terms of Service): Viele Websites verbieten Scraping
                                 explizit in ihren AGB.</li>
                             <li>Seien Sie "nett" zum Server:** Senden Sie Anfragen nicht zu schnell hintereinander
@@ -420,6 +668,43 @@
                         Limits für Abfragen, nicht alle Daten sind verfügbar, Nutzungsrichtlinien können sich ändern).
                         Erfordern meist Registrierung und Programmierkenntnisse.</li>
                 </ul>
+
+                <!-- API Animation Start -->
+                <div id="api-visualization">
+                    <!-- 1. Client (Researcher/App) -->
+                    <div class="api-entity" id="api-client">
+                        <span class="api-icon">💻</span>
+                        <span class="api-label">Forscher:in<br />(Client)</span>
+                    </div>
+
+                    <!-- 2. Animated Request Elements -->
+                    <div class="api-arrow" id="api-request-arrow"></div>
+                    <div class="api-data-bubble" id="api-request-bubble">
+                        <span>🔑 API-Key + Parameter:</span><br />
+                        <code>GET /tweets?q=politik&lang=de</code>
+                    </div>
+
+                    <!-- 3. Animated Response Elements -->
+                    <div class="api-arrow" id="api-response-arrow"></div>
+                    <div class="api-data-bubble" id="api-response-bubble">
+                        <span>Structured Data (JSON):</span><br />
+                        <code>{"tweets": [...]}</code>
+                    </div>
+
+                    <!-- 4. Platform API Endpoint -->
+                    <div class="api-entity" id="api-platform">
+                        <span class="api-icon api-platform-icon">?</span> <!-- Icon updated by JS -->
+                        <span class="api-label">Plattform API</span>
+                    </div>
+
+                    <!-- 5. Status Text -->
+                    <span id="api-status">Initialisiere...</span>
+                </div>
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem; text-align: center;"><i>Client stellt
+                        strukturierte Anfrage an eine Plattform-API, diese verarbeitet sie und sendet strukturierte
+                        Daten zurück.</i></p>
+                <!-- API Animation End -->
+
             </div>
 
             <div class="method-section">
@@ -439,6 +724,60 @@
                 </ul>
                 <p><strong>Vorteil:</strong> Spart Ressourcen für die Erhebung. <strong>Nachteil:</strong> Daten passen
                     eventuell nicht perfekt zur eigenen Forschungsfrage.</p>
+
+                <!-- Secondary Data Kiosk Animation Start -->
+                <div id="secondarydata-visualization">
+
+                    <!-- 1. Kiosk Machine -->
+                    <div id="secdata-kiosk">
+                        <div id="secdata-display">Wähle Datensatz...</div>
+                        <div class="secdata-kiosk-btn-grid">
+                            <button type="button" class="secdata-kiosk-btn" data-type="survey" title="Umfragedaten">
+                                <span class="kiosk-icon">📊</span> Umfragen
+                            </button>
+                            <button type="button" class="secdata-kiosk-btn" data-type="social"
+                                title="Social Media Daten">
+                                <span class="kiosk-icon">💬</span> Social Media
+                            </button>
+                            <button type="button" class="secdata-kiosk-btn" data-type="official"
+                                title="Amtsstatistiken">
+                                <span class="kiosk-icon">📈</span> Statistiken
+                            </button>
+                            <button type="button" class="secdata-kiosk-btn" data-type="archive"
+                                title="Projektarchiv Daten">
+                                <span class="kiosk-icon">📄</span> Projektarchiv
+                            </button>
+                        </div>
+                        <div id="secdata-slot">
+                            <!-- Data appears here first from below -->
+                            <div id="secdata-dispensed-data">
+                                <!-- Content set by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Researcher Area -->
+                    <div id="secdata-researcher-area">
+                        <span id="secdata-question-icon" title="Forschungsfrage">❓</span>
+                        <span id="secdata-researcher-figure">🧑‍💻</span>
+                        <div id="secdata-outcome">
+                            <div class="secdata-outcome-item" id="secdata-benefit">
+                                <span class="outcome-icon"></span><span class="outcome-label">Vorteil</span>
+                            </div>
+                            <div class="secdata-outcome-item" id="secdata-drawback">
+                                <span class="outcome-icon"></span><span class="outcome-label">Nachteil</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Status Text -->
+                    <span id="secdata-status">Bereit.</span>
+                </div>
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem; text-align: center;"><i>Forscher
+                        wählt Datensatz aus "Kiosk", spart Aufwand (Vorteil), muss aber auf Passgenauigkeit achten
+                        (Nachteil).</i></p>
+                <!-- Secondary Data Kiosk Animation End -->
+
             </div>
 
             <div class="method-section">
@@ -452,26 +791,141 @@
                         kontrollierte Stimuli (z.B. unterschiedliche Nachrichten-Frames, Interface-Designs für
                         Partizipationsplattformen). Oft im Labor oder ebenfalls online umsetzbar.</li>
                 </ul>
+
+                <!-- Data Generation Animation Start -->
+                <div id="datagen-visualization">
+                    <!-- 1. Controls -->
+                    <div id="datagen-controls">
+                        <button type="button" id="datagen-btn-survey">Umfrage starten</button>
+                        <button type="button" id="datagen-btn-experiment">Experiment starten</button>
+                    </div>
+
+                    <!-- 2. Researcher -->
+                    <div id="datagen-researcher"></div>
+
+                    <!-- 3. Interaction Area (Questions/Stimuli appear here) -->
+                    <div id="datagen-interaction-area"></div>
+
+                    <!-- 4. Participant(s) Area (Participant/Answers/Reactions appear here) -->
+                    <div id="datagen-participants"></div>
+
+                    <!-- 5. New Data Area -->
+                    <div id="datagen-newdata-area"></div>
+
+                    <!-- 6. Status Text -->
+                    <span id="datagen-status">Bereit.</span>
+                </div>
+                <p style="font-size: 0.9em; color: #666; margin-top: 0.5rem; text-align: center;"><i>Wählen Sie Umfrage oder Experiment, um zu sehen, wie neue Daten durch
+                        Fragen/Antworten oder Stimuli/Reaktionen generiert werden.</i></p>
+                <!-- Data Generation Animation End -->
+
             </div>
 
             <p style="margin-top: 2rem;">Die Wahl der Datenbeschaffungsmethode hängt eng mit der Forschungsfrage und der
                 gewählten Analysemethode zusammen. Oft ist auch eine Kombination verschiedener Datenquellen sinnvoll.
             </p>
 
+            <h2>Genug Theorie</h2>
+            <p>Wir wollen noch ins Tun kommen und besprechen welche Methoden und Anwendungsfelder der
+                politischen Online Kommunikation uns gemeinsam dieses Semester interessieren.
+            </p>
+
+            <hr>
+
+            <h3>Aufgabe für heute</h3>
+            <p>Gemeinsames Brainstorming</p>
+            <ul>
+                <li>Welche <strong>politischen Themen</strong> interessieren uns?</li>
+                <li>Welche <strong>Medien & Plattformen der Online-Kommunikation</strong> interessieren uns?</li>
+                <li>Welche <strong>Forschungsmethoden</strong> interessieren uns?</li>
+            </ul>
+
+            <p>Wir wollen den Kurs in unsere eigene Richtung lenken. Frontalunterricht geht natürlich auch,
+            aber am Besten mit Inhalten die euch auch tatsächlich zum Thema interessieren.
+            </p>
+
+            <div id="brainstorm-tool">
+
+                <div class="brainstorm-controls">
+                    <button type="button" id="btn-visualize" title="Ideen visualisieren" disabled>🎨 Visualisieren</button>
+                    <button type="button" id="btn-export-csv" title="Liste als CSV exportieren" disabled>💾 Export CSV</button>
+                    <button type="button" id="btn-export-png" title="Visualisierung als Bild speichern (benötigt html2canvas)" disabled>🖼️ Export Bild</button>
+                    <!-- <button type="button" id="btn-fullscreen" title="Vollbildmodus">↔️ Vollbild</button> -->
+                     <!-- <button type="button" id="btn-close-modal" title="Vollbild beenden"></button> -->
+                </div>
+            
+                <div class="brainstorm-inputs">
+                    <div class="input-group">
+                        <label for="brainstorm-input-topic">Politische Themen?</label>
+                        <div class="input-row">
+                            <input type="text" id="brainstorm-input-topic" placeholder="z.B. Klimawandel, Wahlkampf...">
+                            <button type="button" id="btn-add-topic" title="Thema hinzufügen">+</button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="brainstorm-input-platform">Medien & Plattformen?</label>
+                         <div class="input-row">
+                             <input type="text" id="brainstorm-input-platform" placeholder="z.B. Twitter, TikTok, Nachrichten-Apps...">
+                             <button type="button" id="btn-add-platform" title="Plattform/Medium hinzufügen">+</button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="brainstorm-input-method">Forschungsmethoden?</label>
+                        <div class="input-row">
+                             <input type="text" id="brainstorm-input-method" placeholder="z.B. Inhaltsanalyse, Umfrage...">
+                            <button type="button" id="btn-add-method" title="Methode hinzufügen">+</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="brainstorm-lists">
+                    <div class="list-column">
+                        <h4>Themen</h4>
+                        <ul id="brainstorm-list-topic" class="brainstorm-list"></ul>
+                    </div>
+                    <div class="list-column">
+                        <h4>Plattformen/Medien</h4>
+                        <ul id="brainstorm-list-platform" class="brainstorm-list"></ul>
+                    </div>
+                    <div class="list-column">
+                        <h4>Methoden</h4>
+                        <ul id="brainstorm-list-method" class="brainstorm-list"></ul>
+                    </div>
+                </div>
+            
+                <div id="brainstorm-visualization">
+                     <!-- Visualization added by JS -->
+                </div>
+                <small style="display: block; text-align: right; font-size: 0.75em; color: #888; margin-top: 5px;">Bildexport basiert auf <a href="https://html2canvas.hertzen.com/" target="_blank" rel="noopener">html2canvas</a>.</small>
+            </div>
+
         </main>
     </div>
-    <!-- Der Footer bleibt am Ende der Datei -->
-    <footer>
+
+    <footer style="z-index: 10000000000;">
         <p>© 2025 Andreas Reich - Universität Hohenheim</p>
     </footer>
 
-    <!-- Lade die vis-network Bibliothek (JS und CSS) via CDN -->
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
     <link href="https://unpkg.com/vis-network/styles/vis-network.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Lade dein eigenes Animationsskript (WICHTIG: NACH der vis-network Bibliothek!) -->
     <script src="network-animation.js"></script>
+    <script src="cnn-animation.js"></script>
+    <script src="survey-animation.js"></script>
+    <script src="casestudy-animation.js"></script>
+    <script src="metadata-animation.js"></script>
+    <script src="experiment-animation.js"></script>
+    <script src="contentanalysis-animation.js"></script>
+    <script src="interviewfg-animation.js"></script>
+    <script src="discourse-animation.js"></script>
+    <script src="api-animation.js"></script>
+    <script src="secondarydata-animation.js"></script>
+    <script src="secondarydata-animation.js"></script>
+    <script src="datagen-animation.js"></script>
 
+    <script src="brainstorm-tool.js"></script>
+    
 </body>
 
 </html>
