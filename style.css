@@ -272,6 +272,7 @@ button:active,
     border-radius: var(--border-radius);
     padding: 1rem 1.5rem;
     margin-bottom: 1.5rem;
+    margin-top: 10px;
     /* Abstand zwischen den Methodenblöcken */
 }
 
@@ -303,6 +304,7 @@ button:active,
     border-radius: var(--border-radius);
     padding: 1rem 1.5rem;
     margin-top: 1.5rem;
+    margin-bottom: 15px;
     /* Abstand nach oben */
     color: #856404;
     /* Dunkelgelbe Schrift */

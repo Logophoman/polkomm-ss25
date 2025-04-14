@@ -13,8 +13,7 @@
 
     <header>
         <h1>Anwendungsfelder der Politischen Kommunikation</h1>
-        <p class="subtitle">Sitzung 2: Datenbeschaffung & Automatisierte Analyse<br>Sommersemester 2025 — Uni
-            Hohenheim<br>Dozent: Andreas Reich</p>
+        <p class="subtitle">Sitzung 2: Datenbeschaffung & Automatisierte Analyse</p>
     </header>
 
     <nav>
@@ -130,10 +129,7 @@
             <p>APIs sind oft der robusteste und von den Plattformen vorgesehene Weg, um Daten zu erhalten.</p>
 
             <h4>Web Scraping: Daten direkt von der Oberfläche</h4>
-            <!-- PLACEHOLDER FÜR WEB SCRAPING GRUNDLAGEN (ABLAUF, DEFINITION) AUS SESSION 1 -->
             <div class="method-section" style="border: 1px dashed #ccc; padding: 1rem; margin-bottom: 1rem;">
-                <small><i>Platzhalter: Hier wird der Block zur Web Scraping Einführung aus Sitzung 1
-                        wiederverwendet.</i></small>
                 <p>Web Scraping ist oft das Mittel der Wahl, wenn Daten öffentlich auf Webseiten zugänglich sind, aber
                     keine strukturierte Schnittstelle (API) für den Zugriff angeboten wird oder diese nicht die
                     gewünschten Daten liefert. Es bezeichnet den Prozess der automatisierten Extraktion von
@@ -165,9 +161,7 @@
                         style="display: inline-block; margin: 0 5px; padding: 2px 5px; background-color: #e0e0e0; border-radius: 3px;">6.
                         Auswertung</span>
                 </div>
-                <small><i>(Grafik/Ablauf wird hier wiederverwendet)</i></small>
             </div>
-            <!-- ENDE SCRAPING GRUNDLAGEN PLACEHOLDER -->
             <p>Scraping erlaubt potenziell Zugriff auf alle <em>öffentlich sichtbaren</em> Informationen.</p>
 
             <h4>Gegenüberstellung API vs. Scraping</h4>
@@ -484,15 +478,15 @@
             </ul>
 
             <p><strong>Anwendungsbezug:</strong> Wir können diese Methode nutzen, um z.B. die Tonalität der zuvor
-                (konzeptionell) gesammelten <strong>TAZ.de-Kommentare</strong> zu analysieren und zu sehen, wie über
+                gesammelten <strong>TAZ.de-Kommentare</strong> zu analysieren und zu sehen, wie über
                 die Artikel diskutiert wird – überwiegen positive, negative oder neutrale Kommentare?</p>
 
             <h4>Praktische Umsetzung im Colab: Sentiment Analyse</h4>
             <div class="colab-embed-box interactive-box">
                 <h4>Google Colab: Sentiment Analyse mit Hugging Face</h4>
                 <p>Das folgende Colab Notebook zeigt, wie man mit der Hugging Face <code>pipeline</code> sehr einfach
-                    Sentiment-Analysen auf deutschen Texten durchführen kann. Wir wenden es beispielhaft auf einige
-                    Sätze an, die unseren (theoretisch) gescrapten Kommentaren ähneln könnten.</p>
+                    Sentiment-Analysen auf unseren Kommentar Texten durchführen kann. Wir wenden es beispielhaft auf einige
+                    Sätze an, die wir vorhin gescraped haben.</p>
                 <p class="colab-fallback-link" style="font-size: 0.9em; margin-top: 0.5rem;">Hier können Sie das Notebook <a href="https://colab.research.google.com/drive/1p3MBBKC39V26lIb6Th-HI9M5L6gJutuE?usp=sharing" target="_blank"
                         rel="noopener noreferrer">direkt öffnen</a> (Kopie anlegen!).</p>
             </div>
@@ -610,16 +604,16 @@
                 </div>
             </div>
 
-            <p><strong>Anwendungsbezug:</strong> Mit einem LLM könnten wir die zuvor (konzeptionell) gesammelten
-                <strong>taz.de-Artikeltexte</strong> systematisch analysieren: Welche Hauptargumente pro/contra 'Letzte
-                Generation' werden genannt? Welche Akteure kommen zu Wort? Welche Frames (z.B. 'Klimaschutz' vs.
-                'Rechtsbruch' vs. 'ziviler Ungehorsam') dominieren die Berichterstattung? Wir könnten das LLM bitten,
+            <p><strong>Anwendungsbezug:</strong> Mit einem LLM könnten wir die zuvor gesammelten
+                <strong>taz.de-Artikeltexte</strong> systematisch analysieren. Wir könnten z.B. untersuchen welche Hauptargumente pro/contra 'Klimawandel' werden genannt? 
+                Welche Akteure kommen zu Wort? Welche Frames (z.B. 'Klimaschutz' vs.
+                'Rechtsbruch' vs. 'ziviler Ungehorsam') dominieren die Berichterstattung? Wir werden das LLM bitten,
                 die Ergebnisse direkt in einem strukturierten Format (z.B. JSON) auszugeben.</p>
 
             <h4>Praktische Umsetzung im Colab: Textanalyse mit LLMs</h4>
             <div class="colab-embed-box interactive-box">
                 <h4>Google Colab: Erste Schritte mit LLMs für Textanalyse</h4>
-                <p>Dieses Colab Notebook demonstriert, wie man ein kleineres, aber fähiges Open-Source LLM (z.B. eine
+                <p>Dieses Colab Notebook demonstriert, wie man ein kleineres, aber fähiges Open-Source LLM wie Quen 2.5 7B (oder auch z.B. eine
                     Variante von Mistral oder Llama) über die Hugging Face <code>transformers</code>-Bibliothek in Colab
                     (mit kostenloser GPU-Unterstützung!) lädt. Wir zeigen, wie man es mittels Prompting für eine
                     spezifische Analyseaufgabe einsetzt, z.B. zur Themenklassifikation oder zur Extraktion von
