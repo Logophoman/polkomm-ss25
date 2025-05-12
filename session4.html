@@ -273,11 +273,53 @@ python tiktokscraper.py
             
             <hr style="border-width: 2px; border-color: var(--primary-color); margin: 3rem 0;">
 
-            <h2>5. Ausblick & Nächste Schritte</h2>
-            <p>Wir haben heute die rechtlichen Grundlagen des Scrapings in Deutschland vertieft und gesehen, wie wir mit Python und Colab Artikeldaten von Genios.de extrahieren und analysieren können. Zudem haben wir einen Einblick in die Welt der Browser-Automatisierung mit Selenium bekommen, die uns den Zugriff auf dynamisch geladene Web-Inhalte ermöglicht.</p>
+            <h2>5. Analyse der gesammelten TikTok-Daten: Sentiment-Analyse der Kommentare</h2>
+            <p>Nachdem wir mit Selenium erfolgreich TikTok-Video-Metadaten und insbesondere die Kommentare gesammelt und als JSON-Datei gespeichert haben, können wir diese Daten nun weiter analysieren. Ein häufiger Anwendungsfall ist die Sentiment-Analyse, um die vorherrschende Stimmung (positiv, negativ, neutral) in den Kommentaren zu einem bestimmten Video zu ermitteln.</p>
+            <p>Das folgende Google Colab Notebook demonstriert diesen Prozess:</p>
+            <ul>
+                <li>Es lädt die zuvor gescrapte JSON-Datei mit den TikTok-Kommentaren.</li>
+                <li>Bereinigt die Kommentartexte leicht.</li>
+                <li>Verwendet ein vortrainiertes multilinguales Sentiment-Analyse-Modell von Hugging Face (<code>tabularisai/multilingual-sentiment-analysis</code>), um das Sentiment jedes Kommentars zu klassifizieren.</li>
+                <li>Fügt die Sentiment-Labels und Konfidenz-Scores dem Datensatz hinzu.</li>
+                <li>Visualisiert die Verteilung der Sentiments und die durchschnittliche Konfidenz pro Label.</li>
+                <li>Speichert die erweiterten Daten optional als CSV-Datei.</li>
+            </ul>
+
+            <div class="colab-embed-box interactive-box" style="margin-top: 1.5rem;">
+                <h4>Google Colab: Sentiment-Analyse von TikTok-Kommentaren</h4>
+                <p>Dieses Notebook führt eine Sentiment-Analyse für die mit dem Selenium-Skript gesammelten TikTok-Kommentare durch. Es nutzt ein multilinguales Modell, um die Stimmung (positiv, negativ, neutral) zu bestimmen und die Ergebnisse zu visualisieren.</p>
+                <p><strong>Wichtig:</strong> Die Ergebnisse einer automatisierten Sentiment-Analyse sollten stets mit Vorsicht interpretiert werden, da Kontext, Ironie und Sarkasmus oft schwer zu erfassen sind. Dieses Notebook dient Demonstrations- und Lernzwecken.</p>
+                <p class="colab-fallback-link" style="font-size: 0.9em; margin-top: 0.5rem;">Das Notebook kann <a href="https://colab.research.google.com/drive/1OFD4wZPgMaAngcllO8WHuQO3lNlDamBY?usp=sharing" target="_blank" rel="noopener noreferrer">hier direkt geöffnet werden</a> (Eigene Kopie anlegen!).</p>
+            </div>
+
+            <h4 style="margin-top: 2rem;">Beispielhafte Visualisierungen der Sentiment-Analyse:</h4>
+            <p>Die folgenden Diagramme illustrieren, wie die Ergebnisse einer solchen Analyse aussehen könnten. Sie wurden mit dem oben genannten Colab-Notebook aus Beispieldaten generiert.</p>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 1.5rem; margin: 1.5rem 0; padding: 1rem; background-color: #f9f9f9; border-radius: 5px;">
+                <div style="flex-basis: 48%; text-align: center; border: 1px solid #ddd; padding: 1rem; border-radius: 4px;">
+                    <h5>Verteilung der Sentiment-Labels</h5>
+                    <img src="verteilung_sentiment.png"
+                        alt="Diagramm zur Verteilung der Sentiment-Labels in TikTok-Kommentaren"
+                        style="max-width: 100%; height: auto; border: 1px solid #eee; margin-bottom: 0.5rem;">
+                    <p style="font-size: 0.9em;"><em>Dieses Balkendiagramm zeigt die Anzahl der Kommentare, die als positiv, negativ oder neutral klassifiziert wurden.</em></p>
+                </div>
+                <div style="flex-basis: 48%; text-align: center; border: 1px solid #ddd; padding: 1rem; border-radius: 4px;">
+                    <h5>Durchschnittliche Konfidenz pro Sentiment-Label</h5>
+                    <img src="konfidenz_sentiment.png"
+                        alt="Diagramm zur durchschnittlichen Konfidenz der Sentiment-Klassifikation"
+                        style="max-width: 100%; height: auto; border: 1px solid #eee; margin-bottom: 0.5rem;">
+                    <p style="font-size: 0.9em;"><em>Dieses Diagramm visualisiert, wie sicher sich das Modell im Durchschnitt bei der Zuordnung der jeweiligen Sentiment-Labels (positiv, negativ, neutral) war.</em></p>
+                </div>
+            </div>
+
+            <p>Die Analyse der Kommentare kann wertvolle Einblicke in die Rezeption von Online-Inhalten geben, Trends aufzeigen oder die öffentliche Meinung zu bestimmten Themen widerspiegeln. Dennoch ist es wichtig, die Limitationen solcher automatisierter Verfahren zu berücksichtigen und die Ergebnisse kritisch zu bewerten.</p>
+
+            <hr style="border-width: 2px; border-color: var(--primary-color); margin: 3rem 0;">
+
+            <h2>6. Ausblick & Nächste Schritte</h2>
+            <p>Wir haben heute die rechtlichen Grundlagen des Scrapings in Deutschland vertieft und gesehen, wie wir mit Python und Colab Artikeldaten von Genios.de extrahieren und analysieren können. Zudem haben wir einen Einblick in die Welt der Browser-Automatisierung mit Selenium bekommen, die uns den Zugriff auf dynamisch geladene Web-Inhalte wie TikTok-Kommentare ermöglicht, und wie diese anschließend weiter analysiert werden können.</p>
             <p>Die vorgestellten Techniken erweitern Ihr methodisches Repertoire erheblich. Es ist jedoch entscheidend, sie stets verantwortungsbewusst, ethisch reflektiert und im Einklang mit den rechtlichen Rahmenbedingungen einzusetzen.</p>
             <p><strong>Ausblick auf die nächste Sitzung:</strong> Abhängig von Ihren Interessen könnten wir uns in der nächsten Sitzung entweder spezifische Aspekte der Browser-Automatisierung praktisch ansehen, uns mit weiteren Analyse-Tools beschäftigen oder tiefer in die Diskussion ethischer Fallstricke in der Online-Forschung einsteigen.</p>
-
         </main>
     </div>
 
